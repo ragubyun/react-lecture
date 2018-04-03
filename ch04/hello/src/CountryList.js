@@ -11,7 +11,7 @@ class CountryList extends Component {
 
         return (
             <ul className="list-group">
-                { countries }
+                {countries}
             </ul>
         )
     }
