@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Title from './Title'
 import CountryList from './CountryList'
+import styles from './styles'
+import Footer from './Footer'
 
 class App extends Component {
     constructor(props) {
@@ -27,11 +29,12 @@ class App extends Component {
         return (
             <div className="container">
                 <h1>Hello, {this.state.message}!</h1>
-                <hr className="dash-style" />
+                <hr className={styles.dashStyle} />
                 {this.createString(4, 5)}
                 <Title title='타이틀' />
                 {Title({title: '타이틀 함수'})}
                 <CountryList countries={this.state.list} />
+                <Footer theme="basic" />
             </div>
         );
     }
