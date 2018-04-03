@@ -5,7 +5,7 @@ class CountryList extends Component {
     render() {
         const countries = this.props.countries.map(item => {
             return (
-                <CountryItem key={item.no} country={item} />
+                <CountryItem key={item.no} {...item} />
             )
         })
 
