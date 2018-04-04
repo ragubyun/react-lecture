@@ -1,11 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-class ListItem extends Component {
-    shouldComponentUpdate(nextProps, nextState) {
-        return (this.props.no !== nextProps.no) || (this.props.item !== nextProps.item)
-    }
-
+class ListItem extends PureComponent {
     render() {
         console.log('render ListItem')
         return (

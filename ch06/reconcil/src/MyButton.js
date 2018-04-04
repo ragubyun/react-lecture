@@ -1,11 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-class MyButton extends Component {
-    shouldComponentUpdate(nextProps, nextState) {
-        return false
-    }
-    
+class MyButton extends PureComponent {
     render() {
         console.log('render MyButton')
         return (
