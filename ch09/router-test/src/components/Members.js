@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 
 class Members extends Component {
+    goHome = () => {
+        if (window.confirm('Go home?')) {
+            this.props.history.push('/')
+        }
+    }
     render() {
         const { members } = this.props;
         let imgstyle = { width: 90, height: 80 }
@@ -22,6 +27,9 @@ class Members extends Component {
                 {list}
               </div>
             </div>
+            <button className="btn btn-primary" onClick={this.goHome}>
+                Go home
+            </button>
           </div>
         )
     }
